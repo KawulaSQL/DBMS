@@ -1,0 +1,15 @@
+[submodule "Storage-Manager"]
+	path = Storage-Manager
+	url = https://github.com/KawulaSQL/Storage-Manager
+[submodule "Failure-Recovery"]
+	path = Failure-Recovery
+	url = https://github.com/KawulaSQL/Failure-Recovery
+[submodule "Query-Optimizer"]
+	path = Query-Optimizer
+	url = https://github.com/KawulaSQL/Query-Optimizer
+[submodule "Query-Processor"]
+	path = Query-Processor
+	url = https://github.com/KawulaSQL/Query-Processor
+[submodule "Concurrency-Control-Manager"]
+	path = Concurrency-Control-Manager
+	url = https://github.com/KawulaSQL/Concurrency-Control-Manager
