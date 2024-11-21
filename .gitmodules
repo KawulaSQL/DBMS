@@ -10,3 +10,6 @@
 [submodule "Concurrency-Control-Manager"]
 	path = Concurrency-Control-Manager
 	url = https://github.com/KawulaSQL/Concurrency-Control-Manager
+[submodule "Query-Processor"]
+	path = Query-Processor
+	url = https://github.com/KawulaSQL/Query-Processor
