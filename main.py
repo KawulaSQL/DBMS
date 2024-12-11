@@ -1,8 +1,15 @@
-from Query_Processor.query_processor import QueryProcessor
+import sys
+sys.path.append("./Query_Processor")
+sys.path.append("./Query_Processor/Query_Optimizer")
+sys.path.append("./Query_Processor/Storage_Manager")
+sys.path.append("./Query_Processor/Concurrency_Control_Manager")
+
+from Query_Processor.QueryProcessor import QueryProcessor
+from Query_Processor.utils.result import ExecutionResult, print_execution_result
 
 if __name__ == "__main__":
-
-    query_processor = QueryProcessor()
+    base_path = "./storage"
+    query_processor = QueryProcessor(base_path)
 
     print(r"""  $$\   $$\                                  $$\            $$$$$$\   $$$$$$\  $$\       """)
     print(r"""  $$ | $$  |                                 $$ |          $$  __$$\ $$  __$$\ $$ |      """)
@@ -16,10 +23,18 @@ if __name__ == "__main__":
     print("   .     .     .     .     .     .     .     .     .     .     .     .     .     .     .   ")
     print("_.` `._.` `._.` `._.` `._.` `._.` `._.` `._.` `._.` `._.` `._.` `._.` `._.` `._.` `._.` `._")
     print("\n")
-    print("Welcome to the KawulaSQL")
-    print("Commands ends with ';'")
-    print("\n")
+    print("Welcome to KawulaSQL!")
+    print("Enter your SQL query or type 'exit' to quit.\n")
     while True:
-        query : str = input("[KawulaSQL] >>> ")
-        query_processor.execute_query(query)
-        print("\n")
+        query = input("[KawulaSQL] >>> ")
+        if query.lower() == "exit":
+            print("Exiting KawulaSQL. Goodbye!")
+            break
+        try:
+            result = query_processor.process_query(query)
+            if isinstance(result, ExecutionResult):
+                print_execution_result(result)
+            else:
+                print("Unexpected result type.")
+        except Exception as e:
+            print(f"Error processing query: {str(e)}")

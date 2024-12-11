@@ -19,3 +19,6 @@
 [submodule "Failure_Recovery"]
 	path = Failure_Recovery
 	url = https://github.com/KawulaSQL/Failure_Recovery.git
+[submodule "Query_Processor"]
+	path = Query_Processor
+	url = https://github.com/KawulaSQL/Query_Processor.git
