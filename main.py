@@ -5,7 +5,7 @@ sys.path.append("./Query_Processor/Storage_Manager")
 sys.path.append("./Query_Processor/Concurrency_Control_Manager")
 
 from Query_Processor.QueryProcessor import QueryProcessor
-from Query_Processor.utils.result import ExecutionResult, print_execution_result
+from Query_Processor.utils.result import ExecutionResult, display_result
 
 if __name__ == "__main__":
     base_path = "./storage"
@@ -33,7 +33,7 @@ if __name__ == "__main__":
         try:
             result = query_processor.process_query(query)
             if isinstance(result, ExecutionResult):
-                print_execution_result(result)
+                display_result(result)
             else:
                 print("Unexpected result type.")
         except Exception as e:
