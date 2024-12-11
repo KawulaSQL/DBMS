@@ -13,3 +13,9 @@
 [submodule "Query-Processor"]
 	path = Query-Processor
 	url = https://github.com/KawulaSQL/Query-Processor
+[submodule "Concurrency_Control_Manager"]
+	path = Concurrency_Control_Manager
+	url = https://github.com/KawulaSQL/Concurrency_Control_Manager.git
+[submodule "Failure_Recovery"]
+	path = Failure_Recovery
+	url = https://github.com/KawulaSQL/Failure_Recovery.git
