@@ -21,6 +21,12 @@ https://github.com/KawulaSQL/DBMS.git
 
 #### Running the Program
 Use the following command to run the program:
+
+1. Update all submodules
+``` bash
+git submodule update --init --recursive
+```
+2. Running the program
 ```bash
 python main.py
 ```
@@ -41,17 +47,6 @@ The mDBMS supports the following SQL commands:
 - `INSERT`
 - `CREATE TABLE`
 - `DROP TABLE`
-
-### Submodules
-To add a submodule to the project, use the following command:
-```bash
-git submodule add [repo link]
-```
-
-To update submodules:
-```bash
-git submodule update --init --recursive
-```
 
 ### Contributors
 The project is developed by the following team members:
